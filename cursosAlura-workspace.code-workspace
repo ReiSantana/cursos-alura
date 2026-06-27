@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "cursoJava"
+		},
+		{
+			"path": "SpringBoot"
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"primeiroprojeto\\src"
+		],
+		"java.project.referencedLibraries": [],
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Console Object</h1>
+<h2>The log() Method</h2>
+<p>Remember to open the console (Press F12) before you click "Run".</p>
+
+<p>How to display an object in the console.</p>
+
+<script>
+const myObj = {firsname:"John", lastname:"Doe"};
+console.log(myObj);
+let meuNome = 'John Doe';
+console.log(`Olá ${meuNome}!`);
+console.log('Seja bem-vindo!');
+//let linguagem = prompt ('Qual é a linguagem de programação que você mais gosta?');
+//console.log(`A linguagem é ${linguagem}`);
+let valor1 = 12;
+let valor2 = 15;
+let resultado = valor1 + valor2;
+console.log(`a soma de valor1 (${valor1}) e valor2 (${valor2}) é ${resultado}`);
+resultado = valor1 - valor2;
+console.log(`a diferença entre valor1 (${valor1}) e valor2 (${valor2}) é ${resultado}`);
+/*
+let idade = prompt('Informe a sua idade: ');
+let resposta = idade < 18 ? 'menor de idade' : 'maior de idade';
+console.log (`(1) Você tem ${idade} anos e é ${resposta}`);
+if (idade >= 18) 
+   console.log (`(2) Você é maior de idade (tem ${idade} anos).`);
+else
+   console.log (`(2) Você é menor de idade (tem ${idade} anos).`);
+let numero = prompt('digite um valor qualquer: ');
+if (numero == 0)
+  console.log(`O valor informado é zero`);
+else {
+  if (numero > 0)
+    console.log(`O valor informado ${numero} é maior que zero`);
+  else
+    console.log(`O valor informado ${numero} é menor que zero`);
+} 
+let numero = 1;
+while (numero < 11) {
+  console.log (`${numero}`);
+  numero++;
+}
+let nota = prompt ('Informe o valor da nota: ');
+resultado = nota > 10 ? 'Invalidado' : (nota >= 7 ? 'Aprovado' : 'Reprovado');
+alert(`Você foi ${resultado}!`);
+*/
+numeroAleatorio = Math.random();
+console.log(`Número gerado foi ${numeroAleatorio}`);  
+numeroAleatorio = parseInt(Math.random() * 10 + 1);
+console.log(`Número gerado entre 1 e 10 foi ${numeroAleatorio}`);  
+numeroAleatorio = parseInt(Math.random() * 1000 + 1);
+console.log(`Número gerado entre 1 e 1000 foi ${numeroAleatorio}`);  
+console.log ('fim');
+</script>
+
+</body>
+</html>

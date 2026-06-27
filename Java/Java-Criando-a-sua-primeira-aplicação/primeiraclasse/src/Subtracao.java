@@ -1,0 +1,6 @@
+public class Subtracao {
+    public static void main(String[] args) {
+        int result = 10-5;
+        System.out.println("Resultado da operação 10-5 = " + result);
+    }
+}
