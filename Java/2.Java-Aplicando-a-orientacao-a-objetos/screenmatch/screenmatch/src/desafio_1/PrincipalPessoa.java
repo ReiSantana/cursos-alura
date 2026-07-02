@@ -1,4 +1,4 @@
-package desafio;
+package desafio_1;
 public class PrincipalPessoa {
 
     public static void main(String[] args) {
