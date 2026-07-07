@@ -1,4 +1,5 @@
-public class Filme {
+package br.com.alura.screenmatch.modelos;
+public class Titulo {
 
     private String nome;
     private int anoDeLancamento;
@@ -7,8 +8,8 @@ public class Filme {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
  
-    void exibeFichaTecnica() {
-        System.out.println("Nome do filme: " + nome);
+    public void exibeFichaTecnica() {
+        System.out.println("Nome: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
         // double notaMedia = somaDasAvaliacoes / totalDeAvaliacoes;
         // ou
@@ -16,7 +17,7 @@ public class Filme {
         System.out.println(String.format("Média das avaliações (%d): %.2f", totalDeAvaliacoes, notaMedia));
     }
 
-    void avalia(double nota) {
+    public void avalia(double nota) {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
@@ -69,4 +70,5 @@ public class Filme {
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
+
 }
