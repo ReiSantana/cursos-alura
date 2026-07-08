@@ -1,6 +1,6 @@
 package desafio_3;
 
-public class Principal {
+public class PrincipalCarro {
 
     public static void main(String[] args) {
         Carro carro = new Carro();
