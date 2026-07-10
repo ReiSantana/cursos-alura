@@ -1,9 +1,13 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
 
         System.out.println("**---------------------------------------------**");
         Filme meuFilme = new Filme();
@@ -16,6 +20,8 @@ public class Principal {
         meuFilme.avalia(10);
 
         meuFilme.exibeFichaTecnica();
+        System.out.println("Classificação do filme \"" + meuFilme.getNome() + "\": ");
+        filtro.filtra(meuFilme);
 
         System.out.println("**---------------------------------------------**");
         // Testando a classe Serie
@@ -34,6 +40,13 @@ public class Principal {
         minhaSerie.avalia(7);
 
         minhaSerie.exibeFichaTecnica();
+        Episodio episodio1 = new Episodio();
+        episodio1.setNumero(1);
+        episodio1.setNome("Pilot");
+        episodio1.setSerie(minhaSerie);
+        episodio1.setTotalVisualizacoes(300);
+        System.out.println("Classificação do episódio \"" + episodio1.getNome() + "\": ");
+        filtro.filtra(episodio1);
 
         System.out.println("**---------------------------------------------**");
         Filme outroFilme = new Filme();
@@ -46,19 +59,22 @@ public class Principal {
 
         outroFilme.exibeFichaTecnica();
 
-        System.out.println("**----------------------------------------------------------------------------------------**");
+        System.out.println(
+                "**----------------------------------------------------------------------------------------**");
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
 
         calculadora.inclui(meuFilme);
-        System.out.println("Tempo total (com \"" + meuFilme.getNome() + "\"): " + calculadora.getTempoTotal() + " minutos");
+        System.out.println(
+                "Tempo total (com \"" + meuFilme.getNome() + "\"): " + calculadora.getTempoTotal() + " minutos");
 
         calculadora.inclui(minhaSerie);
-        System.out.println("Tempo total (com \"" + minhaSerie.getNome() + "\"): " + calculadora.getTempoTotal() + " minutos");
+        System.out.println(
+                "Tempo total (com \"" + minhaSerie.getNome() + "\"): " + calculadora.getTempoTotal() + " minutos");
 
         calculadora.inclui(outroFilme);
-        System.out.println("Tempo total (com \"" + outroFilme.getNome() + "\"): " + calculadora.getTempoTotal() + " minutos");
-
+        System.out.println(
+                "Tempo total (com \"" + outroFilme.getNome() + "\"): " + calculadora.getTempoTotal() + " minutos");
 
     }
 }
