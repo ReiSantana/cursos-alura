@@ -1,8 +1,6 @@
 package desafio_5.modelos;
 
-import desafio_5.calculos.Classificavel;
-
-public class Podcast extends Audio implements Classificavel {
+public class Podcast extends Audio {
 
     private String apresentador;
     private String episodio;
