@@ -93,6 +93,25 @@ public class Principal {
         listaDeFilmes.add(outroFilme);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme da lista: " + listaDeFilmes.get(0).getNome());
+        System.out.println("Todos os filmes da lista: " + listaDeFilmes);
+        // Substituindo o toString() da classe Filme para exibir apenas o nome do filme
+        System.out.println("Todos os filmes da lista (usando toString() sobrescrito): " + listaDeFilmes);
+
+        //********************************************************************
+        /*
+        System.out.println("Todos os filmes da lista (usando for):");
+        for (Filme filme : listaDeFilmes) {
+                System.out.println(filme.getNome());
+        }
+        System.out.println("Todos os filmes da lista (usando forEach):");
+        listaDeFilmes.forEach(filme -> System.out.println(filme.getNome()));
+        System.out.println("Todos os filmes da lista (usando forEach e method reference):");
+        listaDeFilmes.forEach(System.out::println);
+        System.out.println("Todos os filmes da lista (usando forEach e method reference para exibir apenas o nome):");
+        listaDeFilmes.forEach(filme -> System.out.println(filme.getNome()));
+        */
+
+
 
 
 
