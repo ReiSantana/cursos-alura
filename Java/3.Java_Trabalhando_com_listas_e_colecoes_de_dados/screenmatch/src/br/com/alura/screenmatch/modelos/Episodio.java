@@ -3,10 +3,15 @@ package br.com.alura.screenmatch.modelos;
 import br.com.alura.screenmatch.calculos.Classificavel;
 
 public class Episodio extends Titulo implements Classificavel {
+
     private int numero;
     private String nome;
     private Serie serie;
     private int totalVisualizacoes;
+
+    public Episodio(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
 
     public int getTotalVisualizacoes() {
         return totalVisualizacoes;

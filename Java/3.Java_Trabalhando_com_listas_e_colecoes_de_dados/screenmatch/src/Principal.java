@@ -12,9 +12,7 @@ public class Principal {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
 
         System.out.println("**---------------------------------------------**");
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O Poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1972);
+        Filme meuFilme = new Filme("O Poderoso Chefão", 1972);
         meuFilme.setDuracaoEmMinutos(175);
 
         meuFilme.avalia(8);
@@ -27,9 +25,7 @@ public class Principal {
 
         System.out.println("**---------------------------------------------**");
         // Testando a classe Serie
-        Serie minhaSerie = new Serie();
-        minhaSerie.setNome("Breaking Bad");
-        minhaSerie.setAnoDeLancamento(2008);
+        Serie minhaSerie = new Serie("Breaking Bad", 2008);
         minhaSerie.setIncluidoNoPlano(true);
         minhaSerie.setAtiva(true);
         minhaSerie.setTemporadas(5);
@@ -42,18 +38,15 @@ public class Principal {
         minhaSerie.avalia(7);
 
         minhaSerie.exibeFichaTecnica();
-        Episodio episodio1 = new Episodio();
+        Episodio episodio1 = new Episodio("Pilot", 2008);
         episodio1.setNumero(1);
-        episodio1.setNome("Pilot");
         episodio1.setSerie(minhaSerie);
         episodio1.setTotalVisualizacoes(300);
         System.out.println("Classificação do episódio \"" + episodio1.getNome() + "\": ");
         filtro.filtra(episodio1);
 
         System.out.println("**---------------------------------------------**");
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("A Ilha do Medo");
-        outroFilme.setAnoDeLancamento(1972);
+        Filme outroFilme = new Filme("A Ilha do Medo", 1972);
         outroFilme.setDuracaoEmMinutos(120);
         outroFilme.avalia(9.5);
         outroFilme.avalia(10);
@@ -81,9 +74,7 @@ public class Principal {
 
 
         // Aqui começou o curso de Listas e Coleções de Dados
-        var filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
-        filmeDoPaulo.setAnoDeLancamento(2003);
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(178);
         filmeDoPaulo.avalia(10);
 
