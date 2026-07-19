@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.desafio_2;
+package br.com.alura.screenmatch.desafios.desafio_2;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
