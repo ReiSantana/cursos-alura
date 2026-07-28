@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
@@ -33,6 +35,33 @@ public class PrincipalComListas {
             }
         }
 
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Ewan McGregor");
+        buscaPorArtista.add("Sofia Loren");
+        buscaPorArtista.add("Marcello Mastroianni");
+        buscaPorArtista.add("Grande Otelo");
+        buscaPorArtista.add("Tonia Carrero");
+        buscaPorArtista.add("Gloria Menezes");
+        buscaPorArtista.add("Dina Sfat");
+
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+
+        System.out.println("Depois da ordenação:");
+        System.out.println(buscaPorArtista);
+
+        //Apresentando a lista de Filmes
+        System.out.println("Lista de títulos:");
+        System.out.println(lista);
+        Collections.sort(lista);
+        System.out.println("Lista de títulos depois da ordenação:");
+        System.out.println(lista);
+
+        //ordenando pelo ano de lançamento
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando pelo ano de lançamento");
+        System.out.println(lista);
     }
 
 }
