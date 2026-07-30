@@ -103,9 +103,5 @@ public class Principal {
         listaDeFilmes.forEach(filme -> System.out.println(filme.getNome()));
         */
 
-
-
-
-
     }
 }
