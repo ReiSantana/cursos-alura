@@ -6,8 +6,6 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.Scanner;
 import com.google.gson.Gson;
-import br.com.alura.screenmatch.modelos.Filme;
-import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 public class PrincipalComBusca {
@@ -36,6 +34,8 @@ public class PrincipalComBusca {
 
         System.out.println(meuTitulo);
     
+        scanner.close();
+
     }
 
 }
