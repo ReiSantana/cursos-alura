@@ -1,10 +1,6 @@
 package br.com.alura.screenmatch.desafios.desafio_2.exercicio_1;
 
-import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import br.com.alura.screenmatch.desafios.desafio_2.exercicio_1.PessoaImutavel;
 
 public class Principal {
 
@@ -18,13 +14,14 @@ public class Principal {
                 }
                 """;
 
-        Gson gson = new GsonBuilder()
-                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                    .create();
+        Gson gson = new Gson();
 
         PessoaImutavel pessoa1 = gson.fromJson(json, PessoaImutavel.class);
 
         System.out.println(pessoa1);
+
+        Pessoa pessoa2 = new Pessoa(pessoa1);
+        System.out.println("Pessoa convertida: " + pessoa2);
 
     }
 

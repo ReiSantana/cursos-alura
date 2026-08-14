@@ -12,14 +12,14 @@ public class Pessoa {
         this.cidade = cidade;
     }
 
-    public Pessoa(PessoaImutavel vPessoa) {
-        this.nome = vPessoa.nome();
-        this.idade = Integer.valueOf(vPessoa.idade());
-        this.cidade = vPessoa.cidade();
+    public Pessoa(PessoaImutavel pessoa1) {
+        this.nome = pessoa1.nome();
+        this.idade = Integer.valueOf(pessoa1.idade());
+        this.cidade = pessoa1.cidade();
     }
 
     public String toString() {
-        return "Nome: " + nome + " (" + idade + ")" +
+        return "Nome: " + nome + " (" + idade + " anos)" +
                 " - Cidade: " + cidade;
     }
     
