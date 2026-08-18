@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.desafios.desafio_3.exercicio_3;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -41,15 +42,6 @@ public class ConsultaUsuarioGithub {
             e.printStackTrace();
         } catch (ErroConsultaGitHubException e) {
             System.out.println(e.getMessage());
-        }
-    }
-
-    private static String consultarUsuarioGithub(String usuario) {
-
-        if (usuario.equals(usuario)) {
-            return "Informações do usuário " + usuario + ":";
-        } else {
-            throw new ErroConsultaGitHubException("Usuário não encontrado no GitHub.");
         }
     }
 
