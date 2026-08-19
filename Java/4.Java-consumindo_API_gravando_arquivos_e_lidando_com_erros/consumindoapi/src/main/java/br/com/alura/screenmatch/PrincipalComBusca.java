@@ -1,4 +1,5 @@
 package br.com.alura.screenmatch;
+import java.io.FileWriter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -42,6 +43,12 @@ public class PrincipalComBusca {
 
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
             System.out.println("Titulo convertido: " + meuTitulo);
+
+            FileWriter escrita = new FileWriter("filmes.txt", true);
+            escrita.write(meuTitulo.toString());
+            escrita.write("\n");
+            escrita.close();
+            
         } catch (NumberFormatException e) {
             System.out.println("Erro de conversão de número: " + e.getMessage());
         } catch (IllegalArgumentException e) {
